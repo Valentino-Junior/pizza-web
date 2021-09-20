@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Web</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="index.css">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
         <ul class="navbar">
@@ -17,157 +19,214 @@
 
         </ul><br>
         <div class="order-here">
-    <h2>Place Order</h2>
-        <h2>Here</h2>
-     </div>
-</header>
-
-<!--order section-->
-<section>
-    <div class="order section" style="position: absolute;">
-        <div class="container text-center" style="width: 400px; box-shadow: 2px 2px 3px 4px; margin-left: 60px;">
-            <div class="jumbotron">
-    <h1 style="color: yellowgreen;">welcome</h1>
-    <h3 style="color: orange;">Make Your Order</h3>
-    <form action="#">
-        <div class="col-md">
-
-            <h3>Name: </h3>
-            <input type="text" name="name" id="name" required><br>
-            
-            <h3>Pizza Size</h3>
-            <select style="width: 70px;">
-                <option style="display: none;">select...</option>
-                <option>Large Ksh 1200</option>
-                <option>Medium Ksh 950</option>
-                <option>SmallKsh 650</option>
-            </select><br>
-
-            <h3>Pizza Crust</h3>
-            <select style="width: 70px;">
-                <option style="display: none;">select...</option>
-                <option>Thick Crust Ksh </option>
-                <option>Thin Crust Ksh </option>
-                <option>Stuffed Crust </option>
-                <option>Deep Crust </option>
-
-            </select><br>
-
-            <h3>Pizza Toppings</h3>
-            <select style="width: 70px;">
-                <option style="display: none;">select...</option>
-                <option>Sausage Ksh 160</option>
-                <option>Mushroom Ksh 140</option>
-                <option>Pepperoni Ksh 150</option>
-                <option>Onions Ksh 130</option>
-                <option>Bacon Ksh 180</option>
-
-            </select><br>
-    <div class="quantity">
-            <h3>Quantity</h3>
-            <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;" required><br><br>
+            <h2>Place Order</h2>
+            <h2>Here</h2>
         </div>
+    </header>
 
-            <button class="btn btn-success" type="submit">Place Order</button>
+    <!--menu-->
+    <h1 class="text-center">Our Menu</h1>
+    <div class="container d-flex justify-content-center">
+        <div id="menu main" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#menu main" data-slide-to="0" class="active"></li>
+                <li data-target="#menu main" data-slide-to="1"></li>
+                <li data-target="#menu main" data-slide-to="2"></li>
+                <li data-target="#menu main" data-slide-to="3"></li>
+            </ol>
+            <div class="inner-carousel" role="list">
 
+                <div class="carousel-item active" role="option">
+                    <img src="assets/cheesee pizza.jpeg" alt="cheesee pizza" class="menu1 img-fluid"
+                        style="width: 600px; height: 500PX;">
+                    <div class="carousel-caption">
+                        <h2 style="color: black; font-weight: bold;">cheesee pizza</h2>
+                    </div>
+                </div>
+
+                <div class="carousel-item" role="option">
+                    <img src="assets/chicken pizza.jpeg" alt="chicken pizza" class="menu2  img-fluid"
+                        style="width: 600px; height: 500PX;">
+                    <div class="carousel-caption">
+                        <h2 style="color: black; font-weight: bold;">chicken pizza</h2>
+                    </div>
+                </div>
+
+                <div class="carousel-item" role="option">
+                    <img src="assets/pepperoni pizza.jpeg" alt="rush" class="menu3  img-fluid" style="width: 600px; height: 500PX;">
+                    <div class="carousel-caption">
+                        <h2 style="color: black; font-weight: bold;">Pepperoni pizza</h2>
+                    </div>
+                </div>
+
+                <div class="carousel-item" role="option">
+                    <img src="assets/st lous pizza.jpg" alt="st lous pizza" class="menu4 img-fluid"
+                        style="width: 600px; height: 500PX;">
+                    <div class="carousel-caption">
+                        <h2 style="color: black; font-weight: bold;"> St lous pizza</h2>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#menu main" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </a>
+            <a class="carousel-control-next" href="#menu main" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </a>
         </div>
-    </div>
-    </form>
-    </div>
-    </div>
+    </div><br><br>
 
-    <!--order summary-->
-</section>
-<div class="order summary" style="position: relative; float: right;">
-    <div class="container" style="font-size: 24px;">
-<h2 style="color: orange;">Order Summary</h2>
-<p>Hello <span class="summary"> </span>, your order is as follows:</p>
-        <div class="row">
-        <div class="col-md">
-<table class="table table-bordered table-striped table-hover w-25">
-<thead>
-    <tr>
-        <th>Quantity</th>
-        <th>Pizza Size</th>
-        <th>Pizza Crust</th>
-        <th>Pizza Toppings</th>
-        <th>Total</th>
-    </tr>
-</thead>
 
-<tbody>
-    <tr>
-        <td class="Quantity"></td>
-        <td class="Pizza Size"></td>
-        <td class="Pizza Crust"></td>
-        <td class="Pizza Toppings"></td>
-        <td class="Total"></td>
-    </tr>
-</tbody>
-
-</table>
-</div>
-</div>
-<h3 class="Grand Total">Grand Total: </h3>
-<button class= " btn btn-warning" onclick="">Add Order</button>
-<button class= " btn btn-success"onclick="">Checkout</button><br><br>
-
-</div>
-</div>
-<section>
-
-    <!--client delivery section-->
+    <!--order section-->
     <section>
-        <div class="delivery" style="clear: right;">
-        <div class="container text-center" style="width: 500px; box-shadow: 2px 2px 3px 4px;">
-        <div class="jumbotron">
-           <div class="row">
-            <div class="col-md">
-                <form action="#" class="contact">
-                    <h3 style="color: orange;">For delivery, complete the registration form:</h3>
-                    <p>Delivery location: </p>
-                    <input type="text" name="location" id="location" required><br><br>
-                    <label for="phone">Enter a phone number:</label><br><br>
-                    <input type="tel" id="phone" name="phone" placeholder="+254 123 220 224"
-                        pattern="[+254]{4} [0-9]{3} [0-9]{3} [0-9]{3}" required><br><br>
-                    <small>Format: +254 123 220 224</small><br><br>
-                    <input class="btn btn-success" type="submit">
-                    <button class="btn btn-warning" type="reset">Reset</button>
+        <div class="order section" style="position: absolute;">
+            <div class="container text-center" style="width: 400px; box-shadow: 2px 2px 3px 4px; margin-left: 60px;">
+                <div class="jumbotron">
+                    <h1 style="color: yellowgreen;">welcome</h1>
+                    <h3 style="color: orange;">Make Your Order</h3>
+                    <form action="#">
+                        <div class="col-md">
+
+                            <h3>Name: </h3>
+                            <input type="text" name="name" id="name" required><br>
+
+                            <h3>Pizza Size</h3>
+                            <select style="width: 70px;">
+                                <option style="display: none;">select...</option>
+                                <option>Large Ksh 1200</option>
+                                <option>Medium Ksh 950</option>
+                                <option>SmallKsh 650</option>
+                            </select><br>
+
+                            <h3>Pizza Crust</h3>
+                            <select style="width: 70px;">
+                                <option style="display: none;">select...</option>
+                                <option>Thick Crust Ksh </option>
+                                <option>Thin Crust Ksh </option>
+                                <option>Stuffed Crust </option>
+                                <option>Deep Crust </option>
+
+                            </select><br>
+
+                            <h3>Pizza Toppings</h3>
+                            <select style="width: 70px;">
+                                <option style="display: none;">select...</option>
+                                <option>Sausage Ksh 160</option>
+                                <option>Mushroom Ksh 140</option>
+                                <option>Pepperoni Ksh 150</option>
+                                <option>Onions Ksh 130</option>
+                                <option>Bacon Ksh 180</option>
+
+                            </select><br>
+                            <div class="quantity">
+                                <h3>Quantity</h3>
+                                <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;"
+                                    required><br><br>
+                            </div>
+
+                            <button class="btn btn-success" type="submit">Place Order</button>
+
+                        </div>
+                </div>
                 </form>
             </div>
         </div>
-        </div> 
+
+        <!--order summary-->
+    </section>
+    <div class="order summary" style="position: relative; float: right;">
+        <div class="container" style="font-size: 24px;">
+            <h2 style="color: orange;">Order Summary</h2>
+            <p>Hello <span class="summary"> </span>, your order is as follows:</p>
+            <div class="row">
+                <div class="col-md">
+                    <table class="table table-bordered table-striped table-hover w-25">
+                        <thead>
+                            <tr>
+                                <th>Quantity</th>
+                                <th>Pizza Size</th>
+                                <th>Pizza Crust</th>
+                                <th>Pizza Toppings</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="Quantity"></td>
+                                <td class="Pizza Size"></td>
+                                <td class="Pizza Crust"></td>
+                                <td class="Pizza Toppings"></td>
+                                <td class="Total"></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <h3 class="Grand Total">Grand Total: </h3>
+            <button class=" btn btn-warning" onclick="">Add Order</button>
+            <button class=" btn btn-success" onclick="">Checkout</button><br><br>
+
         </div>
     </div>
-    </section>
+    <section>
 
- <!--Contact section-->
- <h1 class="text-center">Contact Us</h1>
-    <form action="#">
-        <div class="form">
-           <h3>Name: </h3>
-               <input type="text" placeholder="Name" class="name" required>
-           <h3>Email: </h3>
-               <input type="email" placeholder="Email" class="email" required>
-           <h3>Comments: </h3>
-           <textarea name="" id="" cols="30" rows="6" required></textarea><br>
-           <div class="submit">
-               <input type="submit" class="btn btn-success">
-               </div>
+        <!--client delivery section-->
+        <section>
+            <div class="delivery" style="clear: right;">
+                <div class="container text-center" style="width: 500px; box-shadow: 2px 2px 3px 4px;">
+                    <div class="jumbotron">
+                        <div class="row">
+                            <div class="col-md">
+                                <form action="#" class="contact">
+                                    <h3 style="color: orange;">For delivery, complete the registration form:</h3>
+                                    <p>Delivery location: </p>
+                                    <input type="text" name="location" id="location" required><br><br>
+                                    <label for="phone">Enter a phone number:</label><br><br>
+                                    <input type="tel" id="phone" name="phone" placeholder="+254 123 220 224"
+                                        pattern="[+254]{4} [0-9]{3} [0-9]{3} [0-9]{3}" required><br><br>
+                                    <small>Format: +254 123 220 224</small><br><br>
+                                    <input class="btn btn-success" type="submit">
+                                    <button class="btn btn-warning" type="reset">Reset</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Contact section-->
+        <h1 class="text-center">Contact Us</h1>
+        <form action="#">
+            <div class="form">
+                <h3>Name: </h3>
+                <input type="text" placeholder="Name" class="name" required>
+                <h3>Email: </h3>
+                <input type="email" placeholder="Email" class="email" required>
+                <h3>Comments: </h3>
+                <textarea name="" id="" cols="30" rows="6" required></textarea><br>
+                <div class="submit">
+                    <input type="submit" class="btn btn-success">
+                </div>
             </div>
         </form>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 </body>
+
 </html>
