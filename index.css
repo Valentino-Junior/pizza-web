@@ -1,0 +1,16 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 400px;
+    background-color:orange;
+    color:black;
+    
+}
+.submit{
+    display: flex;
+    margin-top: 12px;
+    margin-left: 100px;
+    margin-bottom: 12px;
+
+}
