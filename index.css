@@ -6,15 +6,10 @@ ul{
     background-color: black;
     font-size: bold;
     font-size: 28px;
-    color: blanchedalmond;
+    list-style-type: none;
+    padding: 12px;
+}
 
-}
-ul l1{
-padding: 20px;
-list-style-type: none;
-padding: 12px;
-display: inline-block;
-}
 ul >li >a{ 
  color: black; 
  text-decoration: none;
