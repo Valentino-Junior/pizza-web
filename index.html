@@ -22,6 +22,54 @@
      </div>
 </header>
 
+<!--order section-->
+<section>
+    <h2>welcome</h2>
+    <h3>Make Your Order</h3>
+    <form action="#">
+        <div class="col-md-4">
+
+            <h3>Name: </h3>
+            <input type="text" name="name" id="name" required>
+            
+            <h3>Pizza Size</h3>
+            <select style="width: 70px;">
+                <option style="display: none;">select...</option>
+                <option>Large Ksh 1200</option>
+                <option>Medium Ksh 950</option>
+                <option>SmallKsh 650</option>
+            </select>
+
+            <h3>Pizza Crust</h3>
+            <select style="width: 70px;">
+                <option style="display: none;">select...</option>
+                <option>Thick Crust Ksh </option>
+                <option>Thin Crust Ksh </option>
+                <option>Stuffed Crust </option>
+                <option>Deep Crust </option>
+
+            </select>
+
+            <h3>Pizza Toppings</h3>
+            <select style="width: 70px;">
+                <option style="display: none;">select...</option>
+                <option>Sausage Ksh 160</option>
+                <option>Mushroom Ksh 140</option>
+                <option>Pepperoni Ksh 150</option>
+                <option>Onions Ksh 130</option>
+                <option>Bacon Ksh 180</option>
+
+            </select>
+    <div class="quantity">
+            <h3>Quantity</h3>
+            <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;" required><br><br>
+        </div>
+
+            <button class="btn btn-success" type="submit">Place Order</button>
+
+        </div>
+    </form>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
