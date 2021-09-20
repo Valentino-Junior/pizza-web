@@ -1,23 +1,30 @@
-.navbar{
+ul{
     margin: 0px;
     padding: 0px;
     display: flex;
     justify-content: flex-end;
-    background-color:yellowgreen;
+    background-color: black;
     font-size: bold;
+    font-size: 28px;
+    color: blanchedalmond;
 
 }
-.navbar > l1{
-padding: 10px;
-list-style: none; 
+ul l1{
+padding: 20px;
+list-style-type: none;
+padding: 12px;
+display: inline-block;
 }
-.navbar >li >a{ 
+ul >li >a{ 
  color: black; 
  text-decoration: none;
+ color: white;
+ padding: 16px;
+ 
 }
 
 .order-here h2{
-    display:inline-block ;
+    display:inline ;
 background-color: yellowgreen;
 border-radius: 8px;
 padding: 4px;
@@ -30,23 +37,26 @@ padding: 4px;
    padding-right: 10px;
 }
 .order-here{
+    position: absolute;
+    margin-left: 540px;
     transition: transform 0.5s ease-in;
 }
 .order-here:hover{
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 .brand{
     background-image: url(assets/rush.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 600px;
 
 }
 #logo{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .form{
