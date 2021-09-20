@@ -35,6 +35,17 @@ padding: 4px;
 .order-here:hover{
     transform: scale(1.2);
 }
+.brand{
+    background-image: url(assets/rush.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+
+}
+
+
 .form{
     display: flex;
     flex-direction: column;
