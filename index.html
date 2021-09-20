@@ -24,13 +24,16 @@
 
 <!--order section-->
 <section>
-    <h2>welcome</h2>
-    <h3>Make Your Order</h3>
+    <div class="order section" style="position: relative;">
+        <div class="container text-center" style="width: 400px; box-shadow: 2px 2px 3px 4px; margin-left: 60px;">
+            <div class="jumbotron">
+    <h1 style="color: yellowgreen;">welcome</h1>
+    <h3 style="color: orange;">Make Your Order</h3>
     <form action="#">
-        <div class="col-md-4">
+        <div class="col-md">
 
             <h3>Name: </h3>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" required><br>
             
             <h3>Pizza Size</h3>
             <select style="width: 70px;">
@@ -38,7 +41,7 @@
                 <option>Large Ksh 1200</option>
                 <option>Medium Ksh 950</option>
                 <option>SmallKsh 650</option>
-            </select>
+            </select><br>
 
             <h3>Pizza Crust</h3>
             <select style="width: 70px;">
@@ -48,7 +51,7 @@
                 <option>Stuffed Crust </option>
                 <option>Deep Crust </option>
 
-            </select>
+            </select><br>
 
             <h3>Pizza Toppings</h3>
             <select style="width: 70px;">
@@ -59,7 +62,7 @@
                 <option>Onions Ksh 130</option>
                 <option>Bacon Ksh 180</option>
 
-            </select>
+            </select><br>
     <div class="quantity">
             <h3>Quantity</h3>
             <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;" required><br><br>
@@ -68,11 +71,14 @@
             <button class="btn btn-success" type="submit">Place Order</button>
 
         </div>
+    </div>
     </form>
+    </div>
+    </div>
 
     <!--order summary-->
 </section>
-<div class="order summary">
+<div class="order summary" style="position: absolute;">
     <div class="container" style="font-size: 24px;">
 <h2 style="color: orange;">Order Summary</h2>
 <p>Hello <span class="summary"> </span>, your order is as follows:</p>
