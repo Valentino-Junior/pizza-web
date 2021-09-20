@@ -44,7 +44,10 @@ padding: 4px;
     height: 600px;
 
 }
-
+#logo{
+    display: flex;
+    justify-content: center;
+}
 
 .form{
     display: flex;
