@@ -15,24 +15,24 @@
 <body>
     <header>
         <div class="brand">
-        <ul>
-            <li><a href="#our menu">Our Menu</a></li>
-            <li><a href="#contact us">Contact Us</a></li>
+            <ul>
+                <li><a href="#our menu">Our Menu</a></li>
+                <li><a href="#contact us">Contact Us</a></li>
 
-        </ul><br>
-<div id="logo">
-    <img src="assets/pizzabrand.jpeg" alt="pizza brand" >
-</div><br><br>
+            </ul><br>
+            <div id="logo">
+                <img src="assets/pizzabrand.jpeg" alt="pizza brand">
+            </div><br><br>
 
-        <div class="order-here text-center">
-            <h2><a href = "#place order">Order <span>here</span></a></h2>
-             
+            <div class="order-here text-center">
+                <h2><a href="#place order">Order <span>here</span></a></h2>
+
+            </div>
         </div>
-    </div>
     </header>
 
     <!--menu-->
-    <a name ="our menu"></a>
+    <a name="our menu"></a>
     <h1 class="text-center">Our Menu</h1>
     <div class="container d-flex justify-content-center">
         <div id="menu main" class="carousel slide" data-ride="carousel">
@@ -61,7 +61,8 @@
                 </div>
 
                 <div class="carousel-item" role="option">
-                    <img src="assets/pepperoni pizza.jpeg" alt="rush" class="menu3  img-fluid" style="width: 600px; height: 500PX;">
+                    <img src="assets/pepperoni pizza.jpeg" alt="rush" class="menu3  img-fluid"
+                        style="width: 600px; height: 500PX;">
                     <div class="carousel-caption">
                         <h2 style="color: black; font-weight: bold;">Pepperoni pizza</h2>
                     </div>
@@ -89,7 +90,7 @@
 
     <!--order section-->
     <section>
-        <a name = "place order"></a>
+        <a name="place order"></a>
         <div class="order section" style="position: absolute;">
             <div class="container text-center" style="width: 400px; box-shadow: 2px 2px 3px 4px; margin-left: 60px;">
                 <div class="jumbotron">
@@ -99,34 +100,35 @@
                         <div class="col-md">
 
                             <h3>Name: </h3>
-                            <input type="text" name="name" id="name" required><br>
+                            <input type="text" name="name main" id="name" required><br>
 
                             <h3>Pizza Size</h3>
-                            <select style="width: 70px;">
+                            <select name="Pizza Size" class="Pizzasize" style="width: 70px;">
                                 <option style="display: none;">select...</option>
-                                <option>Large Ksh 1200</option>
-                                <option>Medium Ksh 950</option>
-                                <option>SmallKsh 650</option>
+                                <option value="Large">Large Ksh 1200</option>
+                                <option value="Medium">Medium Ksh 950</option>
+                                <option value="Small">Small Ksh 650</option>
                             </select><br>
 
                             <h3>Pizza Crust</h3>
-                            <select style="width: 70px;">
+                            <select name="Pizza Crust" class="Pizzacrust" style="width: 70px;">
                                 <option style="display: none;">select...</option>
-                                <option>Thick Crust Ksh </option>
-                                <option>Thin Crust Ksh </option>
-                                <option>Stuffed Crust </option>
-                                <option>Deep Crust </option>
+                                <option value="Thick Crust">Thick Crust Ksh 300 </option>
+                                <option value="Thin Crust">Thin Crust Ksh 150 </option>
+                                <option value="Stuffed Crust">Stuffed Crust 200</option>
+                                <option value="Deep Crust">Deep Crust 250 </option>
 
                             </select><br>
 
                             <h3>Pizza Toppings</h3>
-                            <select style="width: 70px;">
+                            <select name="Pizza Toppings" class="Pizzatoppings" style="width: 70px;">
                                 <option style="display: none;">select...</option>
-                                <option>Sausage Ksh 160</option>
-                                <option>Mushroom Ksh 140</option>
-                                <option>Pepperoni Ksh 150</option>
-                                <option>Onions Ksh 130</option>
-                                <option>Bacon Ksh 180</option>
+                                <option value="Sausage">Sausage Ksh 160</option>
+                                <option value="Mushroom">Mushroom Ksh 140</option>
+                                <option value="Pepperoni">Pepperoni Ksh 150</option>
+                                <option value="Onions">Onions Ksh 130</option>
+                                <option value="Bacon">Bacon Ksh 180</option>
+
 
                             </select><br>
                             <div class="quantity">
@@ -134,8 +136,8 @@
                                 <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;"
                                     required><br><br>
                             </div>
+                            <button onclick="PlaceOrder()" class="btn btn-success">Place Order</button>
 
-                            <button class="btn btn-success" type="submit">Place Order</button>
 
                         </div>
                 </div>
@@ -151,28 +153,32 @@
             <p>Hello <span class="summary"> </span>, your order is as follows:</p>
             <div class="row">
                 <div class="col-md">
-                    <table class="table table-bordered table-striped table-hover w-25">
+                    <div class="table-responsive">
+                    <table class="table table-md table-bordered table-striped table-hover w-25">
                         <thead>
                             <tr>
-                                <th>Quantity</th>
-                                <th>Pizza Size</th>
-                                <th>Pizza Crust</th>
-                                <th>Pizza Toppings</th>
-                                <th>Total</th>
+                                <th scope="col">#</th>
+                                <th scope="col" >Pizza Size</th>
+                                <th scope="col">Pizza Crust</th>
+                                <th scope="col" >Pizza Toppings</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td class="Quantity"></td>
+                                <th scope="row">1</th>
                                 <td class="Pizza Size"></td>
                                 <td class="Pizza Crust"></td>
                                 <td class="Pizza Toppings"></td>
+                                <td class="Quantity"></td>
                                 <td class="Total"></td>
                             </tr>
                         </tbody>
 
                     </table>
+                </div>
                 </div>
             </div>
             <h3 class="Grand Total">Grand Total: </h3>
@@ -185,18 +191,18 @@
 
 
     <div class="pick up text-center" style="float: right; font-size: larger;">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/clock--v3.png"/>
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/clock--v3.png" />
         <p>Your order will be processed and shipped within 45 minutes of making your order</p>
-    <button class=" btn btn-warning" onclick="">Pick up</button>
-    <button class=" btn btn-success" onclick="">Delivered</button><br><br>
-</div>
+        <button class=" btn btn-warning" onclick="">Pick up</button>
+        <button class=" btn btn-success" onclick="">Delivered</button><br><br>
+    </div>
 
-<div class="pick fee text-center" style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
-    <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png"/>
-    <p class="peak main">Hello  <span></span>, we have successfully received your order</p>
-    <p class="peak fee">Pick up fee is ksh 100</p>
-<p class="peak total">The total amount payable at the time of pickup at the shop is <span></span></p>
-</div>
+    <div class="pick fee text-center" style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
+        <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png" />
+        <p class="peak main">Hello  <span></span>, we have successfully received your order</p>
+        <p class="peak fee">Pick up fee is ksh 100</p>
+        <p class="peak total">The total amount payable at the time of pickup at the shop is <span></span></p>
+    </div>
     <section>
 
         <!--client delivery section-->
@@ -224,16 +230,17 @@
             </div>
 
 
-            <div class="pick fee text-center" style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
-                <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png"/>
+            <div class="pick fee text-center"
+                style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
+                <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png" />
                 <p class="delivery main">Hello <span></span> , we have successfully received your order</p>
                 <p class="delivery fee">Delivery fee to <span></span>is ksh 300</p>
-            <p class="delivery total">The total amount payable at the time of delivery is <span></span> </p>
+                <p class="delivery total">The total amount payable at the time of delivery is <span></span> </p>
             </div>
         </section>
 
         <!--Contact section-->
-        <a name = "contact us"></a>
+        <a name="contact us"></a>
         <h1 class="text-center">Contact Us</h1>
         <form action="#">
             <div class="form">
