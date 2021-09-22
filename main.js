@@ -61,7 +61,8 @@ function delivered() {
   $(document).ready(function () {
       $("#submitmain").click(function (e) {
           e.preventDefault()
-        $("#pic").hide()
+          $(".delivery").hide();
+          $(".deliv").show();
       })
   })
 
@@ -73,4 +74,6 @@ function delivered() {
     $(".deliv").show();
     $("#pic").hide();
     $(".delivery").show()
+    $(".ordersummary").hide();
+
   }
