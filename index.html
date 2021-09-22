@@ -91,7 +91,7 @@
     <!--order section-->
     <section>
         <a name="place order"></a>
-        <div class="order section" style="position: absolute;">
+        <div class="order section" name="ord" style="position: absolute;">
             <div class="container text-center" style="width: 400px; box-shadow: 2px 2px 3px 4px; margin-left: 60px;">
                 <div class="jumbotron">
                     <h1 style="color: yellowgreen;">welcome</h1>
@@ -136,7 +136,9 @@
                                 <input type="number" name="pizzanumber" id="pizzanumber" style="width: 70px;"
                                     required><br><br>
                             </div>
-                            <button onclick="PlaceOrder()" class="btn btn-success">Place Order</button>
+                            <button id="ord main" onclick="addCart()" class="btn btn-success">Place Order</button>
+                            
+
 
 
                         </div>
@@ -147,57 +149,58 @@
 
         <!--order summary-->
     </section>
-    <div class="order summary" style="position: relative; float: right;">
+    <div name="order summary" class="ordersummary" style="position: relative; float: right;">
         <div class="container" style="font-size: 24px;">
             <h2 style="color: orange;">Order Summary</h2>
             <p>Hello <span class="summary"> </span>, your order is as follows:</p>
             <div class="row">
                 <div class="col-md">
                     <div class="table-responsive">
-                    <table class="table table-md table-bordered table-striped table-hover w-25">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col" >Pizza Size</th>
-                                <th scope="col">Pizza Crust</th>
-                                <th scope="col" >Pizza Toppings</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
-                            </tr>
-                        </thead>
+                        <table class="table table-md table-bordered table-striped table-hover w-25">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Pizza Size</th>
+                                    <th scope="col">Pizza Crust</th>
+                                    <th scope="col">Pizza Toppings</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td class="Pizza Size"></td>
-                                <td class="Pizza Crust"></td>
-                                <td class="Pizza Toppings"></td>
-                                <td class="Quantity"></td>
-                                <td class="Total"></td>
-                            </tr>
-                        </tbody>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class="Pizza Size"></td>
+                                    <td class="Pizza Crust"></td>
+                                    <td class="Pizza Toppings"></td>
+                                    <td class="Quantity"></td>
+                                    <td class="Total"></td>
+                                </tr>
+                            </tbody>
 
-                    </table>
-                </div>
+                        </table>
+                    </div>
                 </div>
             </div>
             <h3 class="Grand Total">Grand Total: </h3>
-            <button class=" btn btn-warning" onclick="">Add Order</button>
-            <button class=" btn btn-success" onclick="">Checkout</button><br><br>
+            <button class=" btn btn-warning" onclick="addo()">Add Order</button>
+            <button class=" btn btn-success" onclick="checko()">Checkout</button><br><br>
 
 
         </div>
     </div>
 
 
-    <div class="pick up text-center" style="float: right; font-size: larger;">
+    <div class="text-center" id="pic" style="float: right; font-size: larger; display: none;">
         <img src="https://img.icons8.com/ios-glyphs/30/000000/clock--v3.png" />
         <p>Your order will be processed and shipped within 45 minutes of making your order</p>
         <button class=" btn btn-warning" onclick="">Pick up</button>
-        <button class=" btn btn-success" onclick="">Delivered</button><br><br>
+        <button class=" btn btn-success" onclick="delivered()">Delivered</button><br><br>
     </div>
 
-    <div class="pick fee text-center" style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
+
+    <div class="pick fee text-center" style="clear: right; font-size: larger; position: relative; margin-left: 650px; display: none;">
         <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png" />
         <p class="peak main">Hello  <span></span>, we have successfully received your order</p>
         <p class="peak fee">Pick up fee is ksh 100</p>
@@ -207,7 +210,7 @@
 
         <!--client delivery section-->
         <section>
-            <div class="delivery" style="clear: right;">
+            <div class="delivery" style="clear: right; display: none;">
                 <div class="container text-center" style="width: 500px; box-shadow: 2px 2px 3px 4px;">
                     <div class="jumbotron">
                         <div class="row">
@@ -220,7 +223,7 @@
                                     <input type="tel" id="phone" name="phone" placeholder="+254 123 220 224"
                                         pattern="[+254]{4} [0-9]{3} [0-9]{3} [0-9]{3}" required><br><br>
                                     <small>Format: +254 123 220 224</small><br><br>
-                                    <input class="btn btn-success" type="submit">
+                                    <input class="btn btn-success" type="submit" id="submitmain">
                                     <button class="btn btn-warning" type="reset">Reset</button>
                                 </form>
                             </div>
@@ -230,17 +233,19 @@
             </div>
 
 
-            <div class="pick fee text-center"
-                style="clear: right; font-size: larger; position: relative; margin-left: 650px;">
-                <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png" />
-                <p class="delivery main">Hello <span></span> , we have successfully received your order</p>
-                <p class="delivery fee">Delivery fee to <span></span>is ksh 300</p>
+            <div class=" deliv text-center" 
+                style="clear: right; font-size: larger; position: relative; margin-left: 650px; display: none;">
+                <img src="https://img.icons8.com/ios/50/000000/checked-2--v1.png"/>
+                <p class="delivery main">Hello <span class="nam"></span> , we have successfully received your order</p>
+                <p class="delivery fee">Delivery fee to <span class="del"></span>is ksh 300</p>
                 <p class="delivery total">The total amount payable at the time of delivery is <span></span> </p>
             </div>
+            
         </section>
 
         <!--Contact section-->
         <a name="contact us"></a>
+        <div class="con" style="position: relative; margin-top: 800px;">
         <h1 class="text-center">Contact Us</h1>
         <form action="#">
             <div class="form">
@@ -255,8 +260,10 @@
                 </div>
             </div>
         </form>
+    </div>
 
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -266,6 +273,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+       
         <script src="main.js"></script>
 </body>
 </body>
